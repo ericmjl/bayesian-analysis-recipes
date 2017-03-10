@@ -10,8 +10,8 @@ My goal here is to have one notebook per model. In each notebook, you should end
 
 - The kind of problem that is being tackled here.
 - A description of how the data should be structured.
-- An example data table.
+- An example data table. It generally will end up being **[tidy](http://vita.had.co.nz/papers/tidy-data.pdf)** data.
 - PyMC3 code for the model; in some notebooks, there may be two versions of the same model.
 - Examples on how to report findings from the MCMC-sampled posterior.
 
-It is my hope that you'll find these recipes useful!
+It is my hope that these recipes will be useful for you!
