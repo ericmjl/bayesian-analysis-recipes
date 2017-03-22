@@ -15,3 +15,7 @@ My goal here is to have one notebook per model. In each notebook, you should end
 - Examples on how to report findings from the MCMC-sampled posterior.
 
 It is my hope that these recipes will be useful for you!
+
+## thesis
+
+My thesis here follows the Pareto principle: a large fraction of real-world problems can essentially be boiled down to a few categories of problems, which have a Bayesian interpretation.
