@@ -16,6 +16,8 @@ My goal here is to have one notebook per model. In each notebook, you should end
 
 It is my hope that these recipes will be useful for you!
 
-## thesis
+## (hypo)thesis
 
-My thesis here follows the Pareto principle: a large fraction of real-world problems can essentially be boiled down to a few categories of problems, which have a Bayesian interpretation.
+My hypothesis here follows the Pareto principle: a large fraction of real-world problems can essentially be boiled down to a few categories of problems, which have a Bayesian interpretation.
+
+In particular, I have this hunch that commonly-used methods like ANOVA can be replaced by conceptually simpler and much more interpretable Bayesian alternatives, like John Kruschke's BEST (**B**ayesian **E**stimation **S**upersedes the **T**-test). For example, ANOVA only tests whether means of multiple treatment groups are the same or not... but BEST gives us the estimated posterior distribution over each of the treatment groups, assuming each treatment group is identical. Hence, richer information can be gleaned: we can, given the data at hand, make statements about how any particular pair of groups are different, without requiring additional steps such as multiple hypothesis corrections etc.
