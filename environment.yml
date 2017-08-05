@@ -1,10 +1,18 @@
 name: bayesian  # for Bayesian analysis
 channels: !!python/tuple
-- conda-forge
 - defaults
+- conda-forge
 - ericmjl
 dependencies:
 - python=3.6
+- missingno
+- tensorflow-gpu
+# - theano=0.10.0dev
+- pygpu=0.6.9
+- cython
+- mkl-service
+- scikit-learn
+- autopep8
 - matplotlib
 - numpy
 - pandas
@@ -13,7 +21,9 @@ dependencies:
 - jupyter
 - jupyterlab
 - ipykernel
-- pymc3
+- jupyterlab
+- jupyter_contrib_nbextensions
 - rise
+- h5py
 - pip:
   - environment_kernels
