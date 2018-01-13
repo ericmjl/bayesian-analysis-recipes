@@ -33,3 +33,10 @@ Videos:
 - [Computational Statistics I @ SciPy 2015](https://www.youtube.com/watch?v=fMycLa1bsno)
 - [Computational Statistics II @ SciPy 2015](https://www.youtube.com/watch?v=heFaYLKVZY4)
 - [Bayesian Statistical Analysis with Python @ PyCon 2017](https://www.youtube.com/watch?v=p1IB4zWq9C8)
+
+## got feedback?
+
+There's a few ways you can help make this repository an awesome one for Bayesian method learners out there.
+
+1. **If you have a question:** Post a [GitHub issue](https://github.com/ericmjl/bayesian-analysis-recipes/issues) with your question. I'll try my best to respond.
+1. **If you have a suggested change:** Submit a [pull request](https://github.com/ericmjl/bayesian-analysis-recipes/pulls) detailing the change and why you think it's important. Keep it simple, no need to have essay-length justifications.
