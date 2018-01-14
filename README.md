@@ -29,10 +29,15 @@ Books:
 - [Bayesian Methods for Hackers](https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers)
 - [Think Bayes](http://greenteapress.com/wp/think-bayes/)
 
+Papers:
+
+- [Bayesian Estimation Supersedes the t-Test](http://www.indiana.edu/~kruschke/BEST/BEST.pdf)
+
 Videos:
 - [Computational Statistics I @ SciPy 2015](https://www.youtube.com/watch?v=fMycLa1bsno)
 - [Computational Statistics II @ SciPy 2015](https://www.youtube.com/watch?v=heFaYLKVZY4)
 - [Bayesian Statistical Analysis with Python @ PyCon 2017](https://www.youtube.com/watch?v=p1IB4zWq9C8)
+- [Bayesian Estimation Supersedes the t-Test](https://www.youtube.com/watch?v=fhw1j1Ru2i0)
 
 ## got feedback?
 
