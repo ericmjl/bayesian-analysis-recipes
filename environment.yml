@@ -24,3 +24,4 @@ dependencies:
 - jupyter_contrib_nbextensions
 - rise
 - h5py
+- pyjanitor
