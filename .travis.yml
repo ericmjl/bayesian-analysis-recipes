@@ -1,0 +1,48 @@
+language: python
+python:
+  # We don't actually use the Travis Python, but this keeps it organized.
+  - "3.5"
+install:
+  # We do this conditionally because it saves us some downloading if the
+  # version is the same.
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+
+  # Useful for debugging any issues with conda
+  - conda info -a
+
+  # Install Python and required packages.
+  - conda env create -f environment.yml
+  - source activate causality
+
+  # Ensure that the kernel is installed into the compute environment.
+  - python -m ipykernel install --user --name bayesian
+
+script:
+  # Create the docs directory. This is where we will be publishing from
+  # (see the "deploy" section below).
+  - mkdir -p docs
+  # All notebooks that need to be converted are inside nbconvert_config.py
+  # We have to call on --execute - without doing so, the execution config
+  # inside nbconvert_config.py won't run.
+  - jupyter nbconvert --config nbconvert_config.py --execute
+
+
+# This is an example to deploy to a branch through Travis.
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  # We read the master branch
+  on:
+    branch: master
+  # Take the docs/ directory
+  local-dir: docs
+  # Publish to the gh-pages branch
+  target-branch: gh-pages
+  verbose: true
