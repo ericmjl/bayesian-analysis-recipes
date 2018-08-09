@@ -17,7 +17,7 @@ install:
 
   # Install Python and required packages.
   - conda env create -f environment.yml
-  - source activate causality
+  - source activate bayesian
 
   # Ensure that the kernel is installed into the compute environment.
   - python -m ipykernel install --user --name bayesian
