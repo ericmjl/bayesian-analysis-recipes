@@ -9,7 +9,7 @@ matrix:
   include:
     # we don't actually use this, just ensuring that Travis builds correctly.
     - python: 3.5
-      env: PYTHON_VERSION=3.6
+      env: PYTHON_VERSION=3.7
 
 install:
   # We do this conditionally because it saves us some downloading if the
@@ -26,11 +26,12 @@ install:
   - conda info -a
 
   # Install Python, py.test, and required packages. Double-check this.
-  - conda env create -f environment.yml
   - source $HOME/miniconda/etc/profile.d/conda.sh
+  - conda env create -f environment.yml
   - conda activate bayesian
   # This guarantees that Python version is matrixed.
   - conda install python=$PYTHON_VERSION
+  - python -m ipykernel install --user --name bayesian
 
 script:
   # Create the docs directory. This is where we will be publishing from
