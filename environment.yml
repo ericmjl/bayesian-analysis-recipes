@@ -4,12 +4,10 @@ channels:
 - conda-forge
 - ericmjl
 dependencies:
-- python=3.6
+- python
 - missingno
 - pymc3
-- pygpu=0.6.9
 - cython
-- mkl-service
 - scikit-learn
 - autopep8
 - matplotlib
