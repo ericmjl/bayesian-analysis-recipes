@@ -9,7 +9,6 @@ matrix:
   include:
     # we don't actually use this, just ensuring that Travis builds correctly.
     - python: 3.5
-      env: PYTHON_VERSION=3.7
 
 install:
   # We do this conditionally because it saves us some downloading if the
