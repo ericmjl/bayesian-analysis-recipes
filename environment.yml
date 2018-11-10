@@ -4,7 +4,7 @@ channels:
 - conda-forge
 - ericmjl
 dependencies:
-- python
+- python=3.7
 - missingno
 - pymc3
 - cython
