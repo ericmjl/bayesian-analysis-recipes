@@ -1,26 +1,36 @@
+# This is necessary for pyjanitor as matplotlib is involved.
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 5 # give xvfb some time to start
+
 language: python
-python:
-  # We don't actually use the Travis Python, but this keeps it organized.
-  - "3.5"
+matrix:
+  include:
+    # we don't actually use this, just ensuring that Travis builds correctly.
+    - python: 3.5
+      env: PYTHON_VERSION=3.6
+
 install:
-  # We do this conditionally because it saves us some downloading if the
-  # version is the same.
-  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
+  # We do this conditionally because it saves us some downloading if the
+  # version is the same.
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  - conda config --add channels conda-forge
 
-  # Useful for debugging any issues with conda
-  - conda info -a
+  # Useful for debugging any issues with conda
+  - conda info -a
 
-  # Install Python and required packages.
-  - conda env create -f environment.yml
-  - source activate bayesian
-
-  # Ensure that the kernel is installed into the compute environment.
-  - python -m ipykernel install --user --name bayesian
+  # Install Python, py.test, and required packages. Double-check this.
+  - conda env create -f environment.yml
+  - source $HOME/miniconda/etc/profile.d/conda.sh
+  - conda activate bayesian
+  # This guarantees that Python version is matrixed.
+  - conda install python=$PYTHON_VERSION
 
 script:
   # Create the docs directory. This is where we will be publishing from
@@ -31,6 +41,8 @@ script:
   # inside nbconvert_config.py won't run.
   - jupyter nbconvert --config nbconvert_config.py --execute
 
+notifications:
+  email: true
 
 # This is an example to deploy to a branch through Travis.
 deploy:
