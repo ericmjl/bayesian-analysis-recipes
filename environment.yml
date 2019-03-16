@@ -6,8 +6,8 @@ channels:
 dependencies:
 - python=3.6
 - missingno
-- pymc3
-- pygpu=0.6.9
+- pymc3=3.6
+- pygpu
 - cython
 - mkl-service
 - scikit-learn
@@ -25,3 +25,6 @@ dependencies:
 - rise
 - h5py
 - pyjanitor
+- pip:
+  - jax
+  - jaxlib
