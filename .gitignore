@@ -1,6 +1,7 @@
 # Custom
 *.ipynb_checkpoints/*
 figures/*
+.vscode/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
