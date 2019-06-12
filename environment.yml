@@ -27,6 +27,7 @@ dependencies:
 - rise
 - h5py
 - pyjanitor
+- pip
 - pip:
   - jax
   - jaxlib
