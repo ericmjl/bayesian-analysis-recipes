@@ -5,8 +5,10 @@ channels:
 - ericmjl
 dependencies:
 - python=3.6
+- glances
 - missingno
 - pymc3=3.6
+- numpy-sugar
 - pygpu
 - cython
 - mkl-service
