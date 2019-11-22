@@ -28,6 +28,7 @@ dependencies:
 - h5py
 - pyjanitor
 - pip
+- pre-commit
 - pip:
   - jax
   - jaxlib
