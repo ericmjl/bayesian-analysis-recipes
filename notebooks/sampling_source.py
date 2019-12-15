@@ -8,7 +8,7 @@ class Distribution:
 
     def pdf(self, x):
         """Evaluate total probability of data x."""
-        return np.sum(self.dist.pdf(x))
+        return np.prod(self.dist.pdf(x))
 
     def logpdf(self, x):
         """Evaluate total log probability of data x."""
