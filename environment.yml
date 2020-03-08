@@ -4,10 +4,10 @@ channels:
 - conda-forge
 - ericmjl
 dependencies:
-- python=3.6
+- python=3.8
 - glances
 - missingno
-- pymc3=3.6
+- pymc3=3.8
 - numpy-sugar
 - pygpu
 - cython
