@@ -1,36 +1,28 @@
-name: bayesian  # for Bayesian analysis
+name: bayesian-analysis-recipes  # for Bayesian analysis
 channels:
-- defaults
 - conda-forge
-- ericmjl
 dependencies:
 - python=3.8
-- glances
-- missingno
+- missingno=0.4.2
 - pymc3=3.8
-- numpy-sugar
-- pygpu
-- cython
-- mkl-service
-- scikit-learn
-- autopep8
-- matplotlib
-- numpy
-- pandas
-- scipy
-- seaborn
-- jupyter
-- jupyterlab
-- ipykernel
-- jupyter_contrib_nbextensions
-- nbstripout
-- rise
-- h5py
-- pyjanitor
+- pygpu=0.7.6
+- scikit-learn=0.22
+- matplotlib=3.2.0
+- numpy=1.18.1
+- pandas=1.0.2
+- scipy=1.4.1
+- seaborn=0.10.0
+- jupyter=1.0.0
+- jupyterlab=2.0.1
+- ipykernel=5.1.4
+- nbstripout=0.3.7
+- rise=5.6.1
+- pyjanitor=0.20.4
 - pip
 - pre-commit
-- jupytext
-- nodejs
+- jupytext=1.4.0
+- glances=3.1.4
 - pip:
   - jax
   - jaxlib
+  - -e git+https://github.com/pymc-devs/pymc4.git#egg=pymc4
