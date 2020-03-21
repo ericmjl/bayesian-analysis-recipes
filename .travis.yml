@@ -17,19 +17,22 @@ install:
 
   # Install Python and required packages.
   - conda env create -f environment.yml
-  - source activate bayesian
+  - source activate bayesian-analysis-recipes
 
   # Ensure that the kernel is installed into the compute environment.
-  - python -m ipykernel install --user --name bayesian
+  - python -m ipykernel install --user --name bayesian-analysis-recipes
 
 script:
   # Create the docs directory. This is where we will be publishing from
   # (see the "deploy" section below).
-  - mkdir -p docs
+  # - mkdir -p docs
   # All notebooks that need to be converted are inside nbconvert_config.py
   # We have to call on --execute - without doing so, the execution config
   # inside nbconvert_config.py won't run.
-  - jupyter nbconvert --config nbconvert_config.py --execute
+  # - jupyter nbconvert --config nbconvert_config.py --execute
+
+  # Build docs using mkdocs
+  - mkdocs build
 
 
 # This is an example to deploy to a branch through Travis.
@@ -42,7 +45,7 @@ deploy:
   on:
     branch: master
   # Take the docs/ directory
-  local-dir: docs
+  local-dir: site
   # Publish to the gh-pages branch
   target-branch: gh-pages
   verbose: true

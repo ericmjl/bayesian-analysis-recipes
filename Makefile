@@ -1,9 +1,11 @@
+.PHONY: docs
+
 execute_params = --execute --ExecutePreprocessor.timeout=600
 
 RAWNBS = $(wildcard notebooks/*.ipynb)
 HTMLS =  $(patsubst notebooks/%.ipynb, ../docs/%.html, $(rawnbs))
 
-docs:
+htmldocs:
 	jupyter nbconvert notebooks/bayesian-estimation-multi-sample.ipynb --output ../docs/bayesian-estimation-multi-sample.html
 	jupyter nbconvert notebooks/degrees-of-freedom.ipynb --output ../docs/degrees-of-freedom.html
 	jupyter nbconvert notebooks/dirichlet-multinomial-bayesian-proportions.ipynb --output ../docs/dirichlet-multinomial-bayesian-proportions.html
@@ -13,3 +15,6 @@ docs:
 
 html: $(HTMLS)
 	jupyter nbconvert $< --output $@
+
+docs:
+	mkdocs serve
