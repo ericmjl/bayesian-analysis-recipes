@@ -3,8 +3,10 @@ channels:
 - conda-forge
 dependencies:
 - python=3.8
-- missingno=0.4.2
+# Data Science Stack
 - pymc3=3.8
+- arviz=0.7.0
+- missingno=0.4.2
 - pygpu=0.7.6
 - scikit-learn=0.22
 - matplotlib=3.2.0
@@ -12,17 +14,24 @@ dependencies:
 - pandas=1.0.2
 - scipy=1.4.1
 - seaborn=0.10.0
+- pyjanitor=0.20.4
+# Jupyter
 - jupyter=1.0.0
 - jupyterlab=2.0.1
 - ipykernel=5.1.4
 - nbstripout=0.3.7
 - rise=5.6.1
-- pyjanitor=0.20.4
-- pip
-- pre-commit
 - jupytext=1.4.0
+# Other
+- pip
+- pre-commit=2.2.0
 - glances=3.1.4
 - pip:
   - jax
   - jaxlib
   - -e git+https://github.com/pymc-devs/pymc4.git#egg=pymc4
+  - mkdocs
+  - mkdocs-minify-plugin
+  - pymdown-extensions
+  - mkdocs-material
+  - mknotebooks
