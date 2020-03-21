@@ -3,6 +3,7 @@
 figures/*
 .vscode/*
 src/*
+*.md.tmp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
