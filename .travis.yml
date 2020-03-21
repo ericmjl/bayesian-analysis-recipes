@@ -17,10 +17,10 @@ install:
 
   # Install Python and required packages.
   - conda env create -f environment.yml
-  - source activate bayesian
+  - source activate bayesian-analysis-recipes
 
   # Ensure that the kernel is installed into the compute environment.
-  - python -m ipykernel install --user --name bayesian
+  - python -m ipykernel install --user --name bayesian-analysis-recipes
 
 script:
   # Create the docs directory. This is where we will be publishing from
