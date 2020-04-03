@@ -6,33 +6,33 @@ dependencies:
 # Data Science Stack
 - pymc3=3.8
 - mkl-service
-- theano=1.0.3
-- arviz=0.7.0
-- missingno=0.4.2
-- pygpu=0.7.6
-- scikit-learn=0.22
-- matplotlib=3.2.0
-- numpy=1.18.1
-- pandas=1.0.2
-- scipy=1.4.1
-- seaborn=0.10.0
-- pyjanitor=0.20.4
+- theano
+- arviz
+- missingno
+- pygpu
+- scikit-learn
+- matplotlib
+- numpy
+- pandas
+- scipy
+- seaborn
+- pyjanitor
 # Jupyter
-- jupyter=1.0.0
-- jupyterlab=2.0.1
-- ipykernel=5.1.4
-- nbstripout=0.3.7
-- rise=5.6.1
-- jupytext=1.4.0
+- jupyter
+- jupyterlab
+- ipykernel
+- nbstripout
+- rise
+- jupytext
 # Other
 - pip
-- pre-commit=2.2.0
-- glances=3.1.4
-- pyprojroot=0.2.0
+- pre-commit
+- glances
+- pyprojroot
 - pip:
   - jax
   - jaxlib
-  # - -e git+https://github.com/pymc-devs/pymc4.git#egg=pymc4
+  - -e git+https://github.com/pymc-devs/pymc4.git#egg=pymc4
   # - tfp-nightly
   - mkdocs
   - mkdocs-minify-plugin
