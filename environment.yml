@@ -5,6 +5,8 @@ dependencies:
 - python=3.8
 # Data Science Stack
 - pymc3=3.8
+- mkl-service
+- theano=1.0.3
 - arviz=0.7.0
 - missingno=0.4.2
 - pygpu=0.7.6
@@ -30,8 +32,8 @@ dependencies:
 - pip:
   - jax
   - jaxlib
-  - -e git+https://github.com/pymc-devs/pymc4.git#egg=pymc4
-  - tfp-nightly==0.10.0dev20200314
+  # - -e git+https://github.com/pymc-devs/pymc4.git#egg=pymc4
+  # - tfp-nightly
   - mkdocs
   - mkdocs-minify-plugin
   - pymdown-extensions
