@@ -31,7 +31,7 @@ Books:
 
 Papers:
 
-- [Bayesian Estimation Supersedes the t-Test](http://www.indiana.edu/~kruschke/BEST/BEST.pdf)
+- [Bayesian Estimation Supersedes the t-Test](https://doi.org/10.1037/a0029146)
 
 Videos:
 - [Computational Statistics I @ SciPy 2015](https://www.youtube.com/watch?v=fMycLa1bsno)
