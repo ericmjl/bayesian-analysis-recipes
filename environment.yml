@@ -34,8 +34,8 @@ dependencies:
   - jaxlib
   - -e git+https://github.com/pymc-devs/pymc4.git#egg=pymc4
   # - tfp-nightly
-  - mkdocs
-  - mkdocs-minify-plugin
-  - pymdown-extensions
-  - mkdocs-material
-  - mknotebooks
+  - mkdocs==1.1
+  - mkdocs-minify-plugin==0.2.3
+  - pymdown-extensions>=7.0
+  - mkdocs-material==4.6.3
+  - mknotebooks==0.3.5
