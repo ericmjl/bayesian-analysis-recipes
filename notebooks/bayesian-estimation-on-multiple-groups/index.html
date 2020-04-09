@@ -557,7 +557,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
+<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
 <span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="o">%</span><span class="n">config</span> <span class="n">InlineBackend</span><span class="o">.</span><span class="n">figure_format</span> <span class="o">=</span> <span class="s1">&#39;retina&#39;</span>
@@ -569,7 +569,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pymc4</span> <span class="k">as</span> <span class="nn">pm4</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pymc4</span> <span class="k">as</span> <span class="nn">pm4</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -585,7 +585,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># Read in the data</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Read in the data</span>
 <span class="n">df</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">here</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;datasets/biofilm.csv&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">label_encode</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;isolate&quot;</span><span class="p">])</span>  <span class="c1"># encode isolate as labels.</span>
@@ -723,7 +723,7 @@ There are two ways to handle this situation:</p>
 </div>
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">num_isolates</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;isolate_enc&quot;</span><span class="p">]))</span>
@@ -763,7 +763,7 @@ There are two ways to handle this situation:</p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">trace</span> <span class="o">=</span> <span class="n">pm4</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">bacteria_model</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><span class="n">trace</span> <span class="o">=</span> <span class="n">pm4</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">bacteria_model</span><span class="p">())</span>
 </code></pre></div>
 
 </div>
@@ -782,7 +782,7 @@ to be a fuzzy caterpillar.
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
 <span class="n">axes</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">plot_trace</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">var_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bacteria_model/mu&quot;</span><span class="p">],</span> <span class="n">compact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
@@ -826,7 +826,7 @@ I need a mapping of isolate to its encoding - will come in handy below.
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">mapping</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;isolate_enc&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;isolate&quot;</span><span class="p">]))</span>
+<div class="highlight"><pre><span></span><code><span class="n">mapping</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;isolate_enc&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;isolate&quot;</span><span class="p">]))</span>
 <span class="n">yticklabels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">([</span><span class="n">mapping</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mapping</span><span class="p">))]))</span>
 </code></pre></div>
 
@@ -845,7 +845,7 @@ and informative.
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">axes</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">plot_forest</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">var_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bacteria_model/mu_bounded&quot;</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;ridgeplot&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">yticklabels</span><span class="p">);</span>
 </code></pre></div>
@@ -884,7 +884,7 @@ On the basis of this, we would say that strain 5 was the most different from the
 </div>
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">axes</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">plot_forest</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">var_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bacteria_model/difference&quot;</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;ridgeplot&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">yticklabels</span><span class="p">[</span><span class="mi">1</span><span class="p">:]);</span>
@@ -922,7 +922,7 @@ If we were in a binary decision-making mode, we would say that isolates 5 was th
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">trace_with_posterior</span> <span class="o">=</span> <span class="n">pm4</span><span class="o">.</span><span class="n">sample_posterior_predictive</span><span class="p">(</span><span class="n">bacteria_model</span><span class="p">(),</span> <span class="n">trace</span><span class="o">=</span><span class="n">trace</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">trace_with_posterior</span> <span class="o">=</span> <span class="n">pm4</span><span class="o">.</span><span class="n">sample_posterior_predictive</span><span class="p">(</span><span class="n">bacteria_model</span><span class="p">(),</span> <span class="n">trace</span><span class="o">=</span><span class="n">trace</span><span class="p">)</span>
 </code></pre></div>
 
 </div>
@@ -1409,7 +1409,7 @@ WARNING:tensorflow:Note that RandomStandardNormal inside pfor op may not give sa
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">trace_with_posterior</span><span class="o">.</span><span class="n">posterior_predictive</span>
+<div class="highlight"><pre><span></span><code><span class="n">trace_with_posterior</span><span class="o">.</span><span class="n">posterior_predictive</span>
 </code></pre></div>
 
 </div>
@@ -1442,7 +1442,7 @@ Attributes:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># We want indices for each of the samples.</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># We want indices for each of the samples.</span>
 <span class="n">indices</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">enc</span><span class="p">,</span> <span class="n">iso</span> <span class="ow">in</span> <span class="n">mapping</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">idxs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;isolate_enc&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">enc</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
@@ -1488,7 +1488,7 @@ Attributes:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># Make PPC plot for one of the groups.</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Make PPC plot for one of the groups.</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
 <span class="n">gs</span> <span class="o">=</span> <span class="n">GridSpec</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">axes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>

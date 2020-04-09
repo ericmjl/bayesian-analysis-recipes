@@ -403,7 +403,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pymc3</span> <span class="k">as</span> <span class="nn">pm</span>
@@ -436,7 +436,7 @@
 
 </div>
 </div>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">proportion</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">proportion</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">arr</span> <span class="o">/</span> <span class="n">arr</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
@@ -466,7 +466,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">sick_proportions</span> <span class="o">=</span> <span class="n">proportion</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="n">sick_proportions</span> <span class="o">=</span> <span class="n">proportion</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>
 <span class="n">sick_proportions</span>
 </code></pre></div>
 
@@ -500,7 +500,7 @@
 </div>
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">n_data_points</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="highlight"><pre><span></span><code><span class="n">n_data_points</span> <span class="o">=</span> <span class="mi">10</span>
 
 
 <span class="k">def</span> <span class="nf">make_healthy_multinomial</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
@@ -527,7 +527,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># Make pandas dataframe</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Make pandas dataframe</span>
 <span class="n">healthy_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">healthy_reads</span><span class="p">)</span>
 <span class="n">healthy_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;bacteria1&quot;</span><span class="p">,</span> <span class="s2">&quot;bacteria2&quot;</span><span class="p">,</span> <span class="s2">&quot;bacteria3&quot;</span><span class="p">]</span>
 <span class="n">healthy_df</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">floatX</span><span class="p">(</span><span class="n">healthy_df</span><span class="p">)</span>
@@ -543,7 +543,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">healthy_df</span>
+<div class="highlight"><pre><span></span><code><span class="n">healthy_df</span>
 </code></pre></div>
 
 </div>
@@ -652,7 +652,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">sick_df</span>
+<div class="highlight"><pre><span></span><code><span class="n">sick_df</span>
 </code></pre></div>
 
 </div>
@@ -772,7 +772,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="k">with</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">dirichlet_model</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">dirichlet_model</span><span class="p">:</span>
     <span class="n">proportions_healthy</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Dirichlet</span><span class="p">(</span>
         <span class="s2">&quot;proportions_healthy&quot;</span><span class="p">,</span>
         <span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float32&quot;</span><span class="p">),</span>
@@ -806,7 +806,7 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
 
 <span class="k">with</span> <span class="n">dirichlet_model</span><span class="p">:</span>
     <span class="n">dirichlet_trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
@@ -856,7 +856,7 @@ height=870
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">ylabels</span><span class="o">=</span><span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="n">ylabels</span><span class="o">=</span><span class="p">[</span>
     <span class="s2">&quot;healthy_bacteria1&quot;</span><span class="p">,</span> <span class="s2">&quot;healthy_bacteria2&quot;</span><span class="p">,</span> <span class="s2">&quot;healthy_bacteria3&quot;</span><span class="p">,</span>
     <span class="s2">&quot;sick_bacteria1&quot;</span><span class="p">,</span> <span class="s2">&quot;sick_bacteria2&quot;</span><span class="p">,</span> <span class="s2">&quot;sick_bacteria3&quot;</span><span class="p">,</span>
 <span class="p">]</span>
@@ -890,7 +890,7 @@ height=541
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">healthy_proportions</span><span class="p">,</span> <span class="n">sick_proportions</span>
+<div class="highlight"><pre><span></span><code><span class="n">healthy_proportions</span><span class="p">,</span> <span class="n">sick_proportions</span>
 </code></pre></div>
 
 </div>
