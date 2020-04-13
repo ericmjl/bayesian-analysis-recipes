@@ -1,5 +1,7 @@
 # bayesian-analysis-recipes
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ericmjl/bayesian-analysis-recipes/master)
+
 ## introduction
 
 I've recently been inspired by how flexible and powerful Bayesian statistical analysis can be. Yet, as with many things, flexibility often means a tradeoff with ease-of-use. I think having a cookbook of code that can be used in a number of settings can be extremely helpful for bringing Bayesian methods to a more general setting!
