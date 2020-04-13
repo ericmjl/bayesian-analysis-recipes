@@ -29,6 +29,7 @@ dependencies:
 - pre-commit
 - glances
 - pyprojroot
+- nodejs
 - pip:
   - jax
   - jaxlib
