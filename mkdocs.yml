@@ -5,11 +5,14 @@ theme:
   palette:
     primary: 'green'
     accent: 'green'
-  logo:
-    icon: 'library_books'
+  icon:
+    logo: material/equalizer
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\-\.]+'
+      lang:
+        - en
   - mknotebooks:
       execute: false
       write_markdown: true
@@ -31,11 +34,11 @@ repo_url: 'https://github.com/ericmjl/bayesian-analysis-recipes'
 
 extra:
   social:
-    - type: 'envelope'
+    - icon: 'material/mail'
       link: 'http://www.shortwhale.com/ericmjl'
-    - type: 'github'
+    - icon: 'fontawesome/brands/github'
       link: 'https://github.com/ericmjl'
-    - type: 'twitter'
+    - icon: 'fontawesome/brands/twitter'
       link: 'https://twitter.com/ericmjl'
-    - type: 'linkedin'
+    - icon: 'fontawesome/brands/linkedin'
       link: 'https://linkedin.com/in/ericmjl'

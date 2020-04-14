@@ -36,6 +36,7 @@ Papers:
 - [Bayesian Estimation Supersedes the t-Test](https://doi.org/10.1037/a0029146)
 
 Videos:
+
 - [Computational Statistics I @ SciPy 2015](https://www.youtube.com/watch?v=fMycLa1bsno)
 - [Computational Statistics II @ SciPy 2015](https://www.youtube.com/watch?v=heFaYLKVZY4)
 - [Bayesian Statistical Analysis with Python @ PyCon 2017](https://www.youtube.com/watch?v=p1IB4zWq9C8)

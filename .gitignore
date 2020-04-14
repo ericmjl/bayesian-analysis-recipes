@@ -5,6 +5,11 @@ figures/*
 src/*
 *.md.tmp
 
+# gets copied over during deployment
+docs/index.md
+
+site/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
