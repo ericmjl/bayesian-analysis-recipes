@@ -7,6 +7,9 @@ theme:
     accent: 'green'
   icon:
     logo: material/equalizer
+  features:
+    - instant
+    - tabs
 
 plugins:
   - search:
