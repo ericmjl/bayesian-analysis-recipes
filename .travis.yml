@@ -32,7 +32,7 @@ script:
   # - jupyter nbconvert --config nbconvert_config.py --execute
 
   # Build docs using mkdocs
-  - mkdocs build
+  - make docs
 
 
 # This is an example to deploy to a branch through Travis.

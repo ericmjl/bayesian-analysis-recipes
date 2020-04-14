@@ -7,7 +7,7 @@ dependencies:
 - pymc3=3.8
 - mkl-service
 - theano
-- arviz
+- arviz>=0.6.0
 - missingno
 - pygpu
 - scikit-learn
