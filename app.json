@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "dokku": {
+      "predeploy": "cd /app/www && mkocs build"
+    }
+  }
+}
+
