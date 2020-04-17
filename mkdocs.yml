@@ -6,7 +6,7 @@ theme:
     primary: 'green'
     accent: 'green'
   icon:
-    logo: 'material/cloud'
+    logo: 'fontawesome/solid/book'
   features:
     - instant
     - tabs
