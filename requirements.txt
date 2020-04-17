@@ -1,6 +1,6 @@
 # Used only for building static site docs on Dokku
 mkdocs
 mkdocs-minify-plugin
-pymdown-extension
+pymdown-extensions
 mkdocs-material
 mknotebooks
