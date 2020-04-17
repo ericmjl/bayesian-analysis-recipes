@@ -6,7 +6,7 @@ theme:
     primary: 'green'
     accent: 'green'
   icon:
-    logo: 'material/library_books'
+    logo: 'material/cloud'
   features:
     - instant
     - tabs
@@ -35,7 +35,6 @@ repo_url: 'https://github.com/ericmjl/bayesian-analysis-recipes'
 
 extra:
   social:
-    - icon: 'material/mail'
     - icon: 'fontawesome/brands/github'
       link: 'https://github.com/ericmjl'
     - icon: 'fontawesome/brands/twitter'
