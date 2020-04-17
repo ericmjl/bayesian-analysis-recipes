@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dokku": {
-      "predeploy": "cd /app/www && mkocs build"
+      "predeploy": "cd /app/www && mkdocs build"
     }
   }
 }
