@@ -950,7 +950,8 @@ If we were in a binary decision-making mode, we would say that isolates 5 was th
 
 <div class="output_area" markdown="1">
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>WARNING:tensorflow:AutoGraph could not transform &lt;function pfor.&lt;locals&gt;.f at 0x7f2ad001ddc0&gt; and will run it as-is.
+<pre>
+<code>WARNING:tensorflow:AutoGraph could not transform &lt;function pfor.&lt;locals&gt;.f at 0x7f2ad001ddc0&gt; and will run it as-is.
 Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
 Cause: Inconsistent ASTs detected. This is a bug. Cause: 
 inconsistent values for field args: [&lt;gast.gast.Name object at 0x7f2a107f0820&gt;, &lt;gast.gast.Name object at 0x7f2a107f05e0&gt;, &lt;gast.gast.Name object at 0x7f2a107f0460&gt;] and []Diff:
@@ -1416,6 +1417,7 @@ inconsistent values for field args: [&lt;gast.gast.Name object at 0x7f2a7c102f10
 To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
 WARNING:tensorflow:Note that RandomGamma inside pfor op may not give same output as inside a sequential loop.
 WARNING:tensorflow:Note that RandomStandardNormal inside pfor op may not give same output as inside a sequential loop.
+</code>
 </pre>
 </div>
 </div>
@@ -1477,7 +1479,8 @@ Attributes:
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;1&#39;: [0, 16, 32, 48, 64, 80],
+<pre>
+<code>{&#39;1&#39;: [0, 16, 32, 48, 64, 80],
  &#39;2&#39;: [1, 17, 33, 49, 65, 81],
  &#39;3&#39;: [2, 18, 34, 50, 66, 82],
  &#39;4&#39;: [3, 19, 35, 51, 67, 83],
@@ -1492,7 +1495,8 @@ Attributes:
  &#39;13&#39;: [12, 28, 44, 60, 76, 92],
  &#39;14&#39;: [13, 29, 45, 61, 77, 93],
  &#39;15&#39;: [14, 30, 46, 62, 78, 94],
- &#39;ATCC_29212&#39;: [15, 31, 47, 63, 79, 95]}</pre>
+ &#39;ATCC_29212&#39;: [15, 31, 47, 63, 79, 95]}</code>
+</pre>
 </div>
 
 </div>
