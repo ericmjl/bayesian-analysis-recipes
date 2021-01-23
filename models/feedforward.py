@@ -52,7 +52,7 @@ class ForestCoverModel(BayesianModel):
         Train the Bayesian NN model.
         """
         num_samples, self.num_pred = X.shape
-        num_samples, self.num_out = y.shape
+        _, self.num_out = y.shape
         
         if self.cached_model is None:
             self.cached_model = self.create_model()
@@ -67,4 +67,3 @@ class ForestCoverModel(BayesianModel):
         return self
     
     
-
