@@ -19,7 +19,7 @@ class ForestCoverModel(BayesianModel):
             num_samples, self.num_out = Y.shape
 
         model_input = theano.shared(np.zeros(shape=(1, self.num_pred)))
-        model_output = theano.shared(np.zeros(self.num_out))
+        model_output = theano.shared(np.zeros(shape=(1,self.num_out)))
         
         self.shared_vars = {
             'model_input': model_input,
