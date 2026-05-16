@@ -21,4 +21,3 @@ if numpy.any([isinstance(x.op, tensor.Elemwise) and
     print('Used the cpu')
 else:
     print('Used the gpu')
-
